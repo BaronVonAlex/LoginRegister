@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var login1: Button
     private lateinit var signup: TextView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         password1 = findViewById(R.id.password1)
         login1 = findViewById(R.id.login1)
         signup = findViewById(R.id.signup)
+
+        email1.text = intent?.extras?.getString("email","")
+        password1.text = intent?.extras?.getString("password3","")
 
         login1.setOnClickListener{
             if (email1.text.toString() == truemail && password1.text.toString() == truepass){

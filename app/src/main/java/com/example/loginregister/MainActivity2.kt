@@ -30,12 +30,15 @@ class MainActivity2 : AppCompatActivity(){
 
 
         register.setOnClickListener {
+            val mail = email.text.toString()
+            val password2 = password.text.toString()
+
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("email","Your Email")
-            intent.putExtra("password", "Your password")
-            intent.putExtra("firstname","Your Firstname")
-            intent.putExtra("lastname","Your lastname")
-            intent.putExtra("username", "Your username")
+            intent.putExtra("email",mail)
+            intent.putExtra("password3",password2)
+            intent.putExtra("firstname","firstname1")
+            intent.putExtra("lastname","lastname1")
+            intent.putExtra("username","username1")
             startActivity(intent)
         }
 
