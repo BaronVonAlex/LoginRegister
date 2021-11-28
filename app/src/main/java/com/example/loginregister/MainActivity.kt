@@ -11,8 +11,8 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    private var truemail = "alex@gmail.com"
-    private var truepass = "123123"
+    private var truemail = ""
+    private var truepass = ""
 
     private lateinit var email1: EditText
     private lateinit var password1: EditText
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         signup.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
     }
